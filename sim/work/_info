@@ -1,0 +1,266 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/sim
+vaddressRAM
+Z1 !s110 1635438197
+!i10b 1
+!s100 _aS>SZR@8gYRTV@h[V`3K3
+IW_Vc2@B`JnMh`c>?ob3963
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1635181444
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/addressRAM.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/addressRAM.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1635438197.000000
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/addressRAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/addressRAM.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+naddress@r@a@m
+vborder
+R1
+!i10b 1
+!s100 8lFb_hkQh1h5=cKJLN7N]1
+IY>0KGT3lo7CW^C`=DXREL3
+R2
+R0
+R3
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/border.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/border.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/border.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/border.v|
+!i113 1
+R6
+R7
+vconv
+R1
+!i10b 1
+!s100 79a>;iSMh>EN@gF>kla8]2
+ISQg7PMdXLZcm?oLld><2[3
+R2
+R0
+w1635181720
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv.v|
+!i113 1
+R6
+R7
+vconv_TOP
+R1
+!i10b 1
+!s100 hzR6C]b[_E_LcD[V<cY4;3
+I3hWG?aQ9zn7kPhY7k?4il3
+R2
+R0
+w1635436169
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv_TOP.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv_TOP.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv_TOP.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/conv_TOP.v|
+!i113 1
+R6
+R7
+nconv_@t@o@p
+vdatabase
+Z8 !s110 1635438198
+!i10b 1
+!s100 7QCaJBe;74H[LlA?a^[l[1
+I[KPo5PF6HQ[@`?S7M3`:03
+R2
+R0
+R3
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/database.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/database.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z9 !s108 1635438198.000000
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/database.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/database.v|
+!i113 1
+R6
+R7
+vdense
+R8
+!i10b 1
+!s100 8lnB=e]1:35]0PfHz`6BR2
+IH>5:[@f_gV8LlSA1<Z?2e0
+R2
+R0
+R3
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/dense.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/dense.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/dense.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/dense.v|
+!i113 1
+R6
+R7
+vmaxp
+Z10 !s110 1635438196
+!i10b 1
+!s100 ]_39aFZiO_BXQWFddfDA_0
+Ikn?gQP8K]`8@T?fhYa:be3
+R2
+R0
+R3
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/maxpooling.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/maxpooling.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z11 !s108 1635438196.000000
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/maxpooling.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/maxpooling.v|
+!i113 1
+R6
+R7
+vmemorywork
+R10
+!i10b 1
+!s100 DI@@UPCK]^NKQH:7HN`5_3
+Ilh]5<QTaUV1cAf]cB]fUV0
+R2
+R0
+w1635437456
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAMtoMEM.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAMtoMEM.v
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAMtoMEM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAMtoMEM.v|
+!i113 1
+R6
+R7
+vRAM
+R10
+!i10b 1
+!s100 Cmd>BHVl;Fln67aX3YLS;3
+ILbb76LNPP5gQezd_bmCBb1
+R2
+R0
+R3
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAM.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAM.v
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/RAM.v|
+!i113 1
+R6
+R7
+n@r@a@m
+vresult
+R1
+!i10b 1
+!s100 EoA]da=T[gcYbzk9eE^_Y2
+IMQ<Qb;OWoS?l?iW[1HRCP1
+R2
+R0
+R3
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/result.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/result.v
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/result.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/result.v|
+!i113 1
+R6
+R7
+vtest
+R8
+!i10b 1
+!s100 EWDYDihVDWaS`f4a0Fjzd0
+IO]G1_=HmO7EnLMEg@hZKG1
+R2
+R0
+w1635435912
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/testbench.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/testbench.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/testbench.v|
+!i113 1
+R6
+R7
+vTOP
+!s110 1635438284
+!i10b 1
+!s100 T>B[M[6Z?@9Mo6P?[Wk@j3
+Ije9YeTaT^FzeYF2DgJHO[1
+R2
+R0
+w1635438279
+8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/TOP.v
+FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/TOP.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1635438284.000000
+!s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/TOP.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/verilog/code/neuroset/TOP.v|
+!i113 1
+R6
+R7
+n@t@o@p
