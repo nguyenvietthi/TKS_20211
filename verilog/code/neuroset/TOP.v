@@ -123,8 +123,82 @@ reg nozero_dense;
 
 
 
-database #(SIZE_1) database (.clk(clk),.datata(data),.re(re_RAM),.address(address),.we(we_database),.dp(dp_database),.address_p(address_p_database));
-conv_TOP #(num_conv,SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_5,SIZE_6,SIZE_7,SIZE_8,SIZE_9,SIZE_address_pix,SIZE_address_pix_t,SIZE_address_wei) conv(clk,conv_en,STOP_conv,memstartp_lvl,memstartw_lvl,memstartzap_num,read_addressp_conv,write_addressp_conv,read_addresstp,write_addresstp,read_addressw_conv,we_conv,re_wb_conv,re_conv,we_tp,re_tp,qp,qtp,qw,dp_conv,dtp,prov,matrix,matrix2,i_conv,lvl,slvl,Y1,w11_c,w12_c,w13_c,w14_c,w15_c,w16_c,w17_c,w18_c,w19_c,p1_c,p2_c,p3_c,p4_c,p5_c,p6_c,p7_c,p8_c,p9_c,go_conv_TOP,num,filt,bias,globmaxp_en);
+database #(SIZE_1) database (
+  .clk       (clk)                ,
+  .datata    (data)               ,
+  .re        (re_RAM)             ,
+  .address   (address)            ,
+  .we        (we_database)        ,
+  .dp        (dp_database)        ,
+  .address_p (address_p_database)
+);
+conv_TOP #(
+  num_conv,
+  SIZE_1            ,
+  SIZE_2            ,
+  SIZE_3            ,
+  SIZE_4            ,
+  SIZE_5            ,
+  SIZE_6            ,
+  SIZE_7            ,
+  SIZE_8            ,
+  SIZE_9            ,
+  SIZE_address_pix  ,
+  SIZE_address_pix_t,
+  SIZE_address_wei
+) conv (
+  clk ,
+  conv_en,
+  STOP_conv,
+  memstartp_lvl,
+  memstartw_lvl,
+  memstartzap_num,
+  read_addressp_conv,
+  write_addressp_conv,
+  read_addresstp,
+  write_addresstp,
+  read_addressw_conv,
+  we_conv,
+  re_wb_conv,
+  re_conv,
+  we_tp,
+  re_tp,
+  qp,
+  qtp,
+  qw,
+  dp_conv,
+  dtp,
+  prov,
+  matrix,
+  matrix2,
+  i_conv,
+  lvl,
+  slvl,
+  Y1,
+  w11_c,
+  w12_c,
+  w13_c,
+  w14_c,
+  w15_c,
+  w16_c,
+  w17_c,
+  w18_c,
+  w19_c,
+  p1_c,
+  p2_c,
+  p3_c,
+  p4_c,
+  p5_c,
+  p6_c,
+  p7_c,
+  p8_c,
+  p9_c,
+  go_conv_TOP,
+  num,
+  filt,
+  bias,
+  globmaxp_en
+);
 memorywork #(num_conv,picture_size,convolution_size,SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_5,SIZE_6,SIZE_7,SIZE_8,SIZE_9,SIZE_address_pix,SIZE_address_wei) block(.clk(clk),.we_p(we_p_zagr),.we_w(we_w),.re_RAM(re_RAM),.addrp(write_addressp_zagr),.addrw(write_addressw),.dp(dp_zagr),.dw(dw),.step_out(step),.nextstep(nextstep),.data(data),.address(address),.GO(GO),.in_dense(in_dense));
 RAM #(picture_size,SIZE_1,SIZE_2,SIZE_4,SIZE_9,SIZE_address_pix,SIZE_address_pix_t,SIZE_address_wei) memory(qp,qtp,qw,dp,dtp,dw,write_addressp,read_addressp,write_addresstp,read_addresstp,write_addressw,read_addressw,we_p,we_tp,we_w,re_p,re_tp,re_w,clk);
 border border(clk,conv_en,i_conv,matrix,prov);
