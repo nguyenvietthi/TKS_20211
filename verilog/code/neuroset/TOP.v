@@ -199,7 +199,8 @@ conv_TOP #(
   bias,
   globmaxp_en
 );
-memorywork #(num_conv,picture_size,convolution_size,SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_5,SIZE_6,SIZE_7,SIZE_8,SIZE_9,SIZE_address_pix,SIZE_address_wei) block(.clk(clk),.we_p(we_p_zagr),.we_w(we_w),.re_RAM(re_RAM),.addrp(write_addressp_zagr),.addrw(write_addressw),.dp(dp_zagr),.dw(dw),.step_out(step),.nextstep(nextstep),.data(data),.address(address),.GO(GO),.in_dense(in_dense));
+memorywork #(
+  num_conv,picture_size,convolution_size,SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_5,SIZE_6,SIZE_7,SIZE_8,SIZE_9,SIZE_address_pix,SIZE_address_wei) block(.clk(clk),.we_p(we_p_zagr),.we_w(we_w),.re_RAM(re_RAM),.addrp(write_addressp_zagr),.addrw(write_addressw),.dp(dp_zagr),.dw(dw),.step_out(step),.nextstep(nextstep),.data(data),.address(address),.GO(GO),.in_dense(in_dense));
 RAM #(picture_size,SIZE_1,SIZE_2,SIZE_4,SIZE_9,SIZE_address_pix,SIZE_address_pix_t,SIZE_address_wei) memory(qp,qtp,qw,dp,dtp,dw,write_addressp,read_addressp,write_addresstp,read_addresstp,write_addressw,read_addressw,we_p,we_tp,we_w,re_p,re_tp,re_w,clk);
 border border(clk,conv_en,i_conv,matrix,prov);
 maxp #(SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_address_pix) maxpooling(clk,maxp_en,memstartp_lvl,memstartzap_num,read_addressp_maxp,write_addressp_maxp,re_maxp,we_maxp,qp,dp_maxp,STOP_maxp,matrix2,matrix);
