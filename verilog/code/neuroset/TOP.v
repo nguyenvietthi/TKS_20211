@@ -1,4 +1,12 @@
-module TOP(clk, GO, RESULT, we_database, dp_database, address_p_database, STOP);
+module TOP(
+  input                         clk               ,
+  input                         GO                ,
+  output       [3:0]            RESULT            ,
+  input                         we_database       ,
+  input signed [SIZE_1-1:0]     dp_database       ,
+  input        [12:0]           address_p_database,
+  output reg                    STOP               
+);
 
 parameter num_conv = 1;
 parameter SIZE_1 = 11;
@@ -19,13 +27,7 @@ parameter razmpar = picture_size >> 1;
 parameter razmpar2  = picture_size >> 2;
 parameter picture_storage_limit_2 = ((picture_size*picture_size)*4) >> (num_conv >> 1);
 parameter convolution_size = 9;
-input clk;
-input GO;
-output [3:0] RESULT;
-input we_database;
-input signed [SIZE_1-1:0] dp_database;
-input [12:0] address_p_database;
-output reg STOP;
+
 
 wire signed [SIZE_1-1:0] data;
 wire re_RAM;
