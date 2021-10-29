@@ -200,14 +200,193 @@ conv_TOP #(
   globmaxp_en
 );
 memorywork #(
-  num_conv,picture_size,convolution_size,SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_5,SIZE_6,SIZE_7,SIZE_8,SIZE_9,SIZE_address_pix,SIZE_address_wei) block(.clk(clk),.we_p(we_p_zagr),.we_w(we_w),.re_RAM(re_RAM),.addrp(write_addressp_zagr),.addrw(write_addressw),.dp(dp_zagr),.dw(dw),.step_out(step),.nextstep(nextstep),.data(data),.address(address),.GO(GO),.in_dense(in_dense));
-RAM #(picture_size,SIZE_1,SIZE_2,SIZE_4,SIZE_9,SIZE_address_pix,SIZE_address_pix_t,SIZE_address_wei) memory(qp,qtp,qw,dp,dtp,dw,write_addressp,read_addressp,write_addresstp,read_addresstp,write_addressw,read_addressw,we_p,we_tp,we_w,re_p,re_tp,re_w,clk);
-border border(clk,conv_en,i_conv,matrix,prov);
-maxp #(SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_address_pix) maxpooling(clk,maxp_en,memstartp_lvl,memstartzap_num,read_addressp_maxp,write_addressp_maxp,re_maxp,we_maxp,qp,dp_maxp,STOP_maxp,matrix2,matrix);
-dense #(num_conv,SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_5,SIZE_6,SIZE_7,SIZE_8,SIZE_9,SIZE_address_pix,SIZE_address_wei) dense(clk,dense_en,STOP_dense,in_dense,out_dense,we_dense,re_p_dense,re_w_dense,read_addressp_dense,read_addressw_dense,write_addressp_dense,memstartp_lvl,memstartzap_num,qp,qw,dp_dense,Y1,w11_d,w12_d,w13_d,w14_d,w15_d,w16_d,w17_d,w18_d,w19_d,p11_d,p12_d,p13_d,p14_d,p15_d,p16_d,p17_d,p18_d,p19_d,go_dense,nozero_dense,in_dense);
-result #(SIZE_1,SIZE_2,SIZE_3,SIZE_4,SIZE_address_pix) result(clk,result_en,STOP_res,memstartp_lvl,read_addressp_res,qp,re_p_res,res_out);
+  num_conv,
+  picture_size,
+  convolution_size,
+  SIZE_1,
+  SIZE_2,
+  SIZE_3,
+  SIZE_4,
+  SIZE_5,
+  SIZE_6,
+  SIZE_7,
+  SIZE_8,
+  SIZE_9,
+  SIZE_address_pix,
+  SIZE_address_wei
+) block (
+  .clk(clk),
+  .we_p(we_p_zagr),
+  .we_w(we_w),
+  .re_RAM(re_RAM),
+  .addrp(write_addressp_zagr),
+  .addrw(write_addressw),
+  .dp(dp_zagr),
+  .dw(dw),
+  .step_out(step),
+  .nextstep(nextstep),
+  .data(data),
+  .address(address),
+  .GO(GO),
+  .in_dense(in_dense)
+);
+RAM #(
+  picture_size,
+  SIZE_1,
+  SIZE_2,
+  SIZE_4,
+  SIZE_9,
+  SIZE_address_pix,
+  SIZE_address_pix_t,
+  SIZE_address_wei
+) memory (
+  qp,
+  qtp,
+  qw,
+  dp,
+  dtp,
+  dw,
+  write_addressp,
+  read_addressp,
+  write_addresstp,
+  read_addresstp,
+  write_addressw,
+  read_addressw,
+  we_p,
+  we_tp,
+  we_w,
+  re_p,
+  re_tp,
+  re_w,
+  clk
+);
+border border(
+  clk,
+  conv_en,
+  i_conv,
+  matrix,
+  prov
+);
+maxp #(
+  SIZE_1,
+  SIZE_2,
+  SIZE_3,
+  SIZE_4,
+  SIZE_address_pix
+) maxpooling (
+  clk,
+  maxp_en,
+  memstartp_lvl,
+  memstartzap_num,
+  read_addressp_maxp,
+  write_addressp_maxp,
+  re_maxp,
+  we_maxp,
+  qp,
+  dp_maxp,
+  STOP_maxp,
+  matrix2,
+  matrix
+);
+dense #(
+  num_conv,
+  SIZE_1,
+  SIZE_2,
+  SIZE_3,
+  SIZE_4,
+  SIZE_5,
+  SIZE_6,
+  SIZE_7,
+  SIZE_8,
+  SIZE_9,
+  SIZE_address_pix,
+  SIZE_address_wei
+) dense (
+  clk,
+  dense_en,
+  STOP_dense,
+  in_dense,
+  out_dense,
+  we_dense,
+  re_p_dense,
+  re_w_dense,
+  read_addressp_dense,
+  read_addressw_dense,
+  write_addressp_dense,
+  memstartp_lvl,
+  memstartzap_num,
+  qp,
+  qw,
+  dp_dense,
+  Y1,
+  w11_d,
+  w12_d,
+  w13_d,
+  w14_d,
+  w15_d,
+  w16_d,
+  w17_d,
+  w18_d,
+  w19_d,
+  p11_d,
+  p12_d,
+  p13_d,
+  p14_d,
+  p15_d,
+  p16_d,
+  p17_d,
+  p18_d,
+  p19_d,
+  go_dense,
+  nozero_dense,
+  in_dense
+);
 
-conv #(SIZE_1) conv1 (clk,Y1,prov,matrix,matrix2,i_conv,p11,p12,p13,p14,p15,p16,p17,p18,p19,w11,w12,w13,w14,w15,w16,w17,w18,w19,go_conv,dense_en);
+result #(
+  SIZE_1,
+  SIZE_2,
+  SIZE_3,
+  SIZE_4,
+  SIZE_address_pix
+) result(
+  clk,
+  result_en,
+  STOP_res,
+  memstartp_lvl,
+  read_addressp_res,
+  qp,
+  re_p_res,
+  res_out
+);
+
+conv #(SIZE_1) conv1 (
+  clk,
+  Y1,
+  prov,
+  matrix,
+  matrix2,
+  i_conv,
+  p11,
+  p12,
+  p13,
+  p14,
+  p15,
+  p16,
+  p17,
+  p18,
+  p19,
+  w11,
+  w12,
+  w13,
+  w14,
+  w15,
+  w16,
+  w17,
+  w18,
+  w19,
+  go_conv,
+  dense_en
+);
 
 
 initial lvl = 0;
