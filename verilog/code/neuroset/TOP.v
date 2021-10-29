@@ -359,5 +359,3 @@ always @(posedge STOP_conv)
     end
 
 endmodule
-
-Nguyen Viet Thi
