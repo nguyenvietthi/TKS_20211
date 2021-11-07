@@ -1,4 +1,3 @@
-
 module conv #(
     parameter SIZE = 23 
 )
