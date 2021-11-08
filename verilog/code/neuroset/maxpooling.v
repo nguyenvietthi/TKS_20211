@@ -1,26 +1,31 @@
-module maxp(clk,maxp_en,memstartp,memstartzap,read_addressp,write_addressp,re,we,qp,dp,STOP,matrix2,matrix);
+module maxp #(
 
-parameter SIZE_1=0;
-parameter SIZE_2=0;
-parameter SIZE_3=0;
-parameter SIZE_4=0;
-parameter SIZE_address_pix=0;
-
-input clk,maxp_en;
-output reg STOP;
-input [SIZE_address_pix-1:0] memstartp,memstartzap;
-output reg [SIZE_address_pix-1:0] read_addressp,write_addressp;
-output reg re,we;
-input signed [SIZE_1-1:0] qp;
-output reg signed [SIZE_1-1:0] dp;
-input [4:0] matrix;
-input [9:0] matrix2;
-
-reg [9:0] i;
-reg [9:0] j;
-reg [SIZE_1-1:0] buff;
-reg [2:0] marker;
-wire [9:0] i_wr,i_read;
+    parameter        SIZE_1                  =0,
+                     SIZE_2                  =0,
+                     SIZE_3                  =0,
+                     SIZE_4                  =0,
+                     SIZE_address_pix        =0
+)
+(
+    input                                              clk              ,
+    input                                              maxp_en          ,
+    output     reg STOP                                                 ,
+    input                       [SIZE_address_pix-1:0] memstartp        ,
+    input                       [SIZE_address_pix-1:0] memstartzap      ,
+    output     reg              [SIZE_address_pix-1:0] read_addressp    ,
+    output     reg              [SIZE_address_pix-1:0] write_addressp   ,
+    output     reg                                     re               ,
+    output     reg                                     we               ,
+    input      signed           [SIZE_1-1:0]           qp               ,
+    output     reg signed       [SIZE_1-1:0]           dp               ,
+    input                       [4:0]                  matrix           ,
+    input                       [9:0]                  matrix2          
+);
+    reg     [9:0]                   i;
+    reg     [9:0]                   j;
+    reg     [SIZE_1-1:0]            buff;
+    reg     [2:0]                   marker;
+    wire    [9:0]                   i_wr,i_read;
 initial i=0;
 initial j=0;
 initial marker=0;

@@ -1,36 +1,57 @@
-module dense(clk, dense_en, STOP, in, out, we, re_p, re_w, read_addressp, read_addressw, write_addressp, memstartp, memstartzap, qp, qw, res, Y1, w11, w12, w13, w14, w15, w16, w17, w18, w19, p11, p12, p13, p14, p15, p16, p17, p18, p19, go, nozero, in_dense);
+module dense #(
 
-parameter num_conv=0;
-parameter SIZE_1=0;
-parameter SIZE_2=0;
-parameter SIZE_3=0;
-parameter SIZE_4=0;
-parameter SIZE_5=0;
-parameter SIZE_6=0;
-parameter SIZE_7=0;
-parameter SIZE_8=0;
-parameter SIZE_9=0;
-parameter SIZE_address_pix=0;
-parameter SIZE_address_wei=0;
-
-input clk,dense_en;
-output reg STOP;
-input [4:0] in;
-input [3:0] out;
-output reg we,re_p,re_w;
-output reg [SIZE_address_pix-1:0] read_addressp;
-output reg [SIZE_address_wei-1:0] read_addressw;
-output reg [SIZE_address_pix-1:0] write_addressp;
-input [SIZE_address_pix-1:0] memstartp,memstartzap;
-input signed [SIZE_1-1:0] qp;
-input signed [SIZE_9-1:0] qw;
-output reg signed [SIZE_1-1:0] res;
-input signed [SIZE_1+SIZE_1-2:0] Y1;
-output reg signed [SIZE_1-1:0] w11, w12, w13, w14, w15, w16, w17, w18, w19;
-output reg signed [SIZE_1-1:0] p11, p12, p13, p14, p15, p16, p17, p18, p19;
-output reg go;
-input [4:0] in_dense;
-input nozero;
+    parameter   num_conv            =   0,
+                SIZE_1              =   0,
+                SIZE_2              =   0,
+                SIZE_3              =   0,
+                SIZE_4              =   0,
+                SIZE_5              =   0,
+                SIZE_6              =   0,
+                SIZE_7              =   0,
+                SIZE_8              =   0,
+                SIZE_9              =   0,
+                SIZE_address_pix    =   0,
+                SIZE_address_wei    =   0
+)
+(
+    input                                                clk,dense_en            ,
+    output reg STOP                                                              ,
+    input [4:0]                                          in                      ,
+    input [3:0]                                          out                     ,
+    output reg                                           we                      ,
+    output reg                                           re_p                    ,
+    output reg                                           re_w                    ,
+    output reg          [SIZE_address_pix-1:0]           read_addressp           ,
+    output reg          [SIZE_address_wei-1:0]           read_addressw           ,
+    output reg          [SIZE_address_pix-1:0]           write_addressp          ,
+    input               [SIZE_address_pix-1:0]           memstartp               ,
+    input               [SIZE_address_pix-1:0]           memstartzap             ,
+    input signed        [SIZE_1-1:0]                     qp                      ,
+    input signed        [SIZE_9-1:0]                     qw                      ,
+    output reg signed   [SIZE_1-1:0]                     res                     ,
+    input signed        [SIZE_1+SIZE_1-2:0] Y1                                   ,
+    output reg signed   [SIZE_1-1:0]                     w11                     ,
+    output reg signed   [SIZE_1-1:0]                     w12                     ,
+    output reg signed   [SIZE_1-1:0]                     w13                     ,
+    output reg signed   [SIZE_1-1:0]                     w14                     ,
+    output reg signed   [SIZE_1-1:0]                     w15                     ,
+    output reg signed   [SIZE_1-1:0]                     w16                     ,
+    output reg signed   [SIZE_1-1:0]                     w17                     ,
+    output reg signed   [SIZE_1-1:0]                     w18                     ,
+    output reg signed   [SIZE_1-1:0]                     w19                     ,
+    output reg signed   [SIZE_1-1:0]                     p11                     ,
+    output reg signed   [SIZE_1-1:0]                     p12                     ,
+    output reg signed   [SIZE_1-1:0]                     p13                     ,
+    output reg signed   [SIZE_1-1:0]                     p14                     ,
+    output reg signed   [SIZE_1-1:0]                     p15                     ,
+    output reg signed   [SIZE_1-1:0]                     p16                     ,
+    output reg signed   [SIZE_1-1:0]                     p17                     ,
+    output reg signed   [SIZE_1-1:0]                     p18                     ,
+    output reg signed   [SIZE_1-1:0]                     p19                     ,
+    output reg                                           go                      ,
+    input               [4:0]                            in_dense                ,
+    input                                                nozero                  
+);
 
 reg [3:0] marker;
 reg [6:0] lvl;
@@ -66,9 +87,9 @@ begin
         i=i+1;
         if ((i>(in>>(num_conv>>1))+4)&&(marker==4))
             begin
-        	    write_addressp=memstartzap+((lvl+1)>>(num_conv>>1))-1;
+                write_addressp=memstartzap+((lvl+1)>>(num_conv>>1))-1;
                 dp_check=dp[SIZE_1+SIZE_1-2+1:SIZE_1-1];
-		        if (dp_check>2**(SIZE_1-1)-1)
+                if (dp_check>2**(SIZE_1-1)-1)
                 begin
                     $display("OVERFLOW in dense!");
                     dp_shift=2**(SIZE_1-1)-1;
@@ -82,7 +103,7 @@ begin
                 dp=0; 
                 marker=0;
                 sh=sh+1; if (sh==num_conv) sh=0; 
-		        if ((sh==0)||(lvl==out)) we=1;
+                if ((sh==0)||(lvl==out)) we=1;
                 if (lvl==out) begin STOP=1; if (sh!=0) write_addressp=write_addressp+1; end
     end
 end
