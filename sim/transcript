@@ -137,3 +137,25 @@ vsim work.test
 # Error loading design
 # End time: 22:55:33 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 4, Warnings: 48
+# Compile of TOP.v was successful.
+vsim work.test
+# vsim work.test 
+# Start time: 23:04:51 on Nov 25,2021
+# Loading work.test
+# Loading work.TOP
+# Loading work.database
+# Loading work.conv_TOP
+# Loading work.memorywork
+# Loading work.addressRAM
+# Loading work.RAM
+# Loading work.border
+# ** Error: (vsim-3033) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): Instantiation of 'maxpooling' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
+#         Searched libraries:
+#             D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/sim/work
+# Loading work.dense
+# Loading work.result
+# Loading work.conv
+# Error loading design
+# End time: 23:04:52 on Nov 25,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

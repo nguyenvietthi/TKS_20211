@@ -267,7 +267,7 @@ border border(
   matrix,
   prov
 );
-maxp #(
+maxpooling #(
   SIZE_1,
   SIZE_2,
   SIZE_3,
