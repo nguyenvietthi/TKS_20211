@@ -1,20 +1,18 @@
-module result #(
-	parameter SIZE_1=0					,
-	parameter SIZE_2=0					,
-	parameter SIZE_3=0					,
-	parameter SIZE_4=0					,
-	parameter SIZE_address_pix=0
-)
-(
-	input 				 				clk          , 
-	input 				 				enable 		 ,
-	output reg 			 				STOP         ,
-	input 		[SIZE_address_pix-1:0] 	memstartp    ,
-	input 		[SIZE_1-1:0] 		 	qp           ,
-	output reg 			 				re           ,
-	output reg  [SIZE_address_pix-1:0] 	read_addressp,
-	output reg 	[3:0]                   RESULT        
-);
+module result(clk,enable,STOP,memstartp,read_addressp,qp,re,RESULT);
+
+parameter SIZE_1=0;
+parameter SIZE_2=0;
+parameter SIZE_3=0;
+parameter SIZE_4=0;
+parameter SIZE_address_pix=0;
+
+input clk,enable;
+output reg STOP;
+input [SIZE_address_pix-1:0] memstartp;
+input [SIZE_1-1:0] qp;
+output reg re;
+output reg [SIZE_address_pix-1:0] read_addressp;
+output reg [3:0] RESULT;
 
 reg [3:0] marker;
 reg signed [SIZE_1-1:0] buff;

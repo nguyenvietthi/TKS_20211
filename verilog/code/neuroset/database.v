@@ -1,16 +1,13 @@
-module database # (
+module database(clk,datata,re,address,we,dp,address_p);
 
-  parameter SIZE          = 0
-)
-(
-  input                                    clk       ,
-  input                                    re        ,
-  input                                    we        ,
-  input                [12:0]              address   ,
-  input   signed       [SIZE-1:0]          dp        ,
-  input                [12:0]              address_p ,
-  output  reg signed   [SIZE-1:0]          datata     
-);
+parameter SIZE=0;
+
+input clk;
+output reg signed [SIZE-1:0] datata;
+input re,we;
+input [12:0] address;
+input signed [SIZE-1:0] dp;
+input [12:0] address_p;
 
 reg signed [SIZE-1:0] storage [5459:0];
 
