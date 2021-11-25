@@ -217,3 +217,5 @@ run -all
 #    Time: 4735150 ps  Iteration: 1  Instance: /test
 # 1
 # Break in Module test at D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v line 49
+# End time: 23:28:43 on Nov 25,2021, Elapsed time: 0:03:16
+# Errors: 0, Warnings: 1
