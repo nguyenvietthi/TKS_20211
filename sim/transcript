@@ -159,3 +159,61 @@ vsim work.test
 # Error loading design
 # End time: 23:04:52 on Nov 25,2021, Elapsed time: 0:00:01
 # Errors: 1, Warnings: 0
+# Compile of addressRAM.v was successful.
+# Compile of border.v was successful.
+# Compile of conv.v was successful.
+# Compile of conv_TOP.v was successful.
+# Compile of database.v was successful.
+# Compile of dense.v was successful.
+# Compile of maxpooling.v was successful.
+# Compile of RAM.v was successful.
+# Compile of RAMtoMEM.v was successful.
+# Compile of result.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim work.test
+# vsim work.test 
+# Start time: 23:24:17 on Nov 25,2021
+# Loading work.test
+# Loading work.TOP
+# Loading work.database
+# Loading work.conv_TOP
+# Loading work.memorywork
+# Loading work.addressRAM
+# Loading work.RAM
+# Loading work.border
+# ** Error: (vsim-3033) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): Instantiation of 'maxpooling' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
+#         Searched libraries:
+#             D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/sim/work
+# Loading work.dense
+# Loading work.result
+# Loading work.conv
+# Error loading design
+# End time: 23:24:17 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of TOP.v was successful.
+vsim work.test
+# vsim work.test 
+# Start time: 23:25:27 on Nov 25,2021
+# Loading work.test
+# Loading work.TOP
+# Loading work.database
+# Loading work.conv_TOP
+# Loading work.memorywork
+# Loading work.addressRAM
+# Loading work.RAM
+# Loading work.border
+# Loading work.maxp
+# Loading work.dense
+# Loading work.result
+# Loading work.conv
+# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v(16): [PCDPC] - Port size (11) does not match connection size (12) for port 'dp_database'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
+# WARNING: No extended dataflow license exists
+run -all
+# Check case result
+# RESULT:  7
+# ** Note: $finish    : D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v(49)
+#    Time: 4735150 ps  Iteration: 1  Instance: /test
+# 1
+# Break in Module test at D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v line 49
