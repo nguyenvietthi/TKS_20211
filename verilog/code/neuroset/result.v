@@ -6,15 +6,15 @@ module result #(
 	parameter SIZE_address_pix=0
 )
 (
-	input 											 				clk          , 
-	input 											 				enable 			 ,
-	output reg 									 				STOP         ,
-	input 			[SIZE_address_pix-1:0] 	memstartp    ,
-	input 			[SIZE_1-1:0] 					 	qp           ,
-	output reg 									 				re           ,
+	input 				 				clk          , 
+	input 				 				enable 		 ,
+	output reg 			 				STOP         ,
+	input 		[SIZE_address_pix-1:0] 	memstartp    ,
+	input 		[SIZE_1-1:0] 		 	qp           ,
+	output reg 			 				re           ,
 	output reg  [SIZE_address_pix-1:0] 	read_addressp,
 	output reg 	[3:0]                   RESULT        
-)
+);
 
 reg [3:0] marker;
 reg signed [SIZE_1-1:0] buff;

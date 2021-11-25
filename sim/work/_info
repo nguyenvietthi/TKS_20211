@@ -9,13 +9,13 @@ z2
 cModel Technology
 dD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/orignal/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA-master/sim
 vaddressRAM
-Z0 !s110 1635520965
+Z0 !s110 1637855399
 !i10b 1
-!s100 _aS>SZR@8gYRTV@h[V`3K3
-IU]dfbX2kVf0PG8a0nfEWk1
+!s100 ^6Kf6H6aK]9ciN?=]mf7T0
+Il[<=]SFPc6h3VnXYROD6E1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/sim
-Z3 w1635181444
+Z3 w1636304190
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/addressRAM.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/addressRAM.v
 L0 1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1635520965.000000
+Z5 !s108 1637855399.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/addressRAM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/addressRAM.v|
 !i113 1
@@ -33,8 +33,8 @@ naddress@r@a@m
 vborder
 R0
 !i10b 1
-!s100 8lFb_hkQh1h5=cKJLN7N]1
-I6zRQUd^23[>WclX<lYOXh3
+!s100 5Ol0oCfobNiR_8[NF4Tab0
+I2R79QYSCTndn:hT6h6cbK0
 R1
 R2
 R3
@@ -52,13 +52,13 @@ R5
 R6
 R7
 vconv
-R0
+Z8 !s110 1637855400
 !i10b 1
-!s100 79a>;iSMh>EN@gF>kla8]2
-In[5WoGPgjEgOg20C::0_71
+!s100 ==MbMVlLVj210fY6IYgEV1
+IUFh7PhcXOaaW`>UI6hPfb2
 R1
 R2
-w1635181720
+w1636304674
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
 L0 1
@@ -73,21 +73,21 @@ R5
 R6
 R7
 vconv_TOP
-R0
+R8
 !i10b 1
-!s100 hzR6C]b[_E_LcD[V<cY4;3
-I9i]L7jIR2[:Gl12YlMNBP3
+!s100 V:3Mjje]4ElM2[JW5jdbQ0
+IZIFEQVFSGz=o<WUoh?UK^3
 R1
 R2
-w1635436169
+R3
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-L0 1
+L0 2
 R4
 r1
 !s85 0
 31
-R5
+Z9 !s108 1637855400.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v|
 !i113 1
@@ -95,13 +95,13 @@ R6
 R7
 nconv_@t@o@p
 vdatabase
-R0
+R8
 !i10b 1
-!s100 7QCaJBe;74H[LlA?a^[l[1
-Io]iboVDa8h;0Sn6<9<ema2
+!s100 fioj2PBP>]@gg9E]Tl9]@0
+I5Qch2mVTP@Kb^R0b]^ZaL1
 R1
 R2
-R3
+Z10 w1637765614
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/database.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/database.v
 L0 1
@@ -109,20 +109,20 @@ R4
 r1
 !s85 0
 31
-R5
+R9
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/database.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/database.v|
 !i113 1
 R6
 R7
 vdense
-Z8 !s110 1635520966
+Z11 !s110 1637855401
 !i10b 1
-!s100 8lnB=e]1:35]0PfHz`6BR2
-I46AH]CRAS]McN23mX1jIM2
+!s100 fD`g?g0PCMHJ`PQ:XBdW93
+I2QzgXL760noKdFeJ^EHK31
 R1
 R2
-R3
+R10
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v
 L0 1
@@ -130,20 +130,20 @@ R4
 r1
 !s85 0
 31
-R5
+Z12 !s108 1637855401.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v|
 !i113 1
 R6
 R7
 vmaxp
-R8
+R11
 !i10b 1
-!s100 ]_39aFZiO_BXQWFddfDA_0
-II?X?bzMlzj5VSkb5mH`fn1
+!s100 bmhUzAc2_JQkO_TNz]mDX1
+IiaaOkAf9dlFIX7jEn_kF63
 R1
 R2
-R3
+R10
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
 L0 1
@@ -151,14 +151,14 @@ R4
 r1
 !s85 0
 31
-Z9 !s108 1635520966.000000
+R12
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v|
 !i113 1
 R6
 R7
 vmemorywork
-R8
+!s110 1635520966
 !i10b 1
 !s100 =SLiDi_T@@VZ3a^SHBn771
 IRJ6?K=?z24kW57HN;:1X?3
@@ -172,20 +172,20 @@ R4
 r1
 !s85 0
 31
-R9
+!s108 1635520966.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/RAMtoMEM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/RAMtoMEM.v|
 !i113 1
 R6
 R7
 vRAM
-R8
+!s110 1637855402
 !i10b 1
-!s100 Cmd>BHVl;Fln67aX3YLS;3
-I0DkW=D40hoUGC9<65ADCG3
+!s100 Ca2=A<5lV@Y9C9Q8aAP8h0
+IA>h<?koVR`=MCSLm_6SYJ2
 R1
 R2
-R3
+R10
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/RAM.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/RAM.v
 L0 1
@@ -193,7 +193,7 @@ R4
 r1
 !s85 0
 31
-R9
+!s108 1637855402.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/RAM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/RAM.v|
 !i113 1
@@ -201,13 +201,13 @@ R6
 R7
 n@r@a@m
 vresult
-R8
+!s110 1637855717
 !i10b 1
-!s100 EoA]da=T[gcYbzk9eE^_Y2
-Imgf8@ZAk]E3W>nXGlfmN[3
+!s100 l_hGZkL[7fce98jFB7a?03
+IkXJA2cMDB2FP;hlkd:lBO2
 R1
 R2
-R3
+w1637855710
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v
 L0 1
@@ -215,14 +215,14 @@ R4
 r1
 !s85 0
 31
-R9
+!s108 1637855717.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v|
 !i113 1
 R6
 R7
 vtest
-R0
+!s110 1635520965
 !i10b 1
 !s100 EWDYDihVDWaS`f4a0Fjzd0
 IgMmd17Nzk6NZlG^Om>RTP2
@@ -236,20 +236,20 @@ R4
 r1
 !s85 0
 31
-R5
+!s108 1635520965.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v|
 !i113 1
 R6
 R7
 vTOP
-R8
+!s110 1637855646
 !i10b 1
-!s100 T>B[M[6Z?@9Mo6P?[Wk@j3
-IhXd6_oiA^gQe[nRADLTfI1
+!s100 7@dELRIQ322oRO=FVU=Rj0
+Ijo^ii>1FBZ77oDGZU@D<A0
 R1
 R2
-w1635520584
+w1637855640
 8D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
 FD:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
 L0 1
@@ -257,7 +257,7 @@ R4
 r1
 !s85 0
 31
-R9
+!s108 1637855646.000000
 !s107 D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v|
 !i113 1

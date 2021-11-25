@@ -1,4 +1,4 @@
-module TOP(
+module TOP #(parameter SIZE_1 = 11)(
   input                         clk               ,
   input                         GO                ,
   output       [3:0]            RESULT            ,
@@ -9,7 +9,7 @@ module TOP(
 );
 
 parameter num_conv = 1;
-parameter SIZE_1 = 11;
+
 parameter SIZE_2 = SIZE_1*2;
 parameter SIZE_3 = SIZE_1*3;
 parameter SIZE_4 = SIZE_1*4;
