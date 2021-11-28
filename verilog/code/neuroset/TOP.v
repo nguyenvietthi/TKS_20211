@@ -121,8 +121,6 @@ reg [4:0] in_dense;
 reg [3:0] out_dense;
 reg nozero_dense;
 
-
-
 database #(SIZE_1) database (
   .clk       (clk)                ,
   .datata    (data)               ,

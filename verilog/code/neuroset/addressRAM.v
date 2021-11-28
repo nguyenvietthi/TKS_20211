@@ -3,8 +3,8 @@ module addressRAM(
 	output reg re_RAM,
 	output reg [12:0] firstaddr, lastaddr
 );
-parameter picture_size = 0;
-parameter convolution_size = 0;
+parameter picture_size = 0; // kích thước ảnh 28
+parameter convolution_size = 0; // kích thức kernel 3x3
 
 parameter picture_storage_limit = picture_size*picture_size;
 parameter convweight = picture_storage_limit + (1*4 + 4*4 + 4*8 + 8*8) * convolution_size;  // all convolution weights [784:1828]
@@ -18,7 +18,7 @@ parameter conv6 = picture_storage_limit + (1*4 + 4*4 + 4*8 + 8*8 + 8*16 + 16*16)
 
 parameter dense = conv6+176;
 
-always @(step)
+always @(step) //step là các layer state
 case (step)
 1'd1: begin       //picture
 		firstaddr = 0;
@@ -55,7 +55,7 @@ case (step)
 		lastaddr = conv6;
 		re_RAM = 1;
 	  end
-4'd14: begin		//weights conv7
+4'd14: begin		//weights desen
 		firstaddr = conv6;
 		lastaddr =  dense;
 		re_RAM = 1;
