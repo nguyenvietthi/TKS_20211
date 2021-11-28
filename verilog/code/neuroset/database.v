@@ -2,12 +2,12 @@ module database(clk,datata,re,address,we,dp,address_p);
 
 parameter SIZE=0;
 
-input clk;
-output reg signed [SIZE-1:0] datata;
-input re,we;
-input [12:0] address;
-input signed [SIZE-1:0] dp;
-input [12:0] address_p;
+input clk; // clock
+output reg signed [SIZE-1:0] datata; // data output
+input re,we; // read, write enable
+input [12:0] address; // địa chỉ đọc 
+input signed [SIZE-1:0] dp; // input data
+input [12:0] address_p; // địa chỉ ghi
 
 reg signed [SIZE-1:0] storage [5459:0];
 

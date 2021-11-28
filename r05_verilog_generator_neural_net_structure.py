@@ -1467,12 +1467,12 @@ def go_mat_model(model, bit_precizion):
         if 'Conv2D' in str(type(layer)):
 
             # Standard float convolution
-            weights[i] = layer.get_weights()[0]
+            weights[i] = layer.get_weights()[0] # mảng đầu tiên cung cấp weight (index = 0), mảng thứ 2 cũng cấp độ lệch (index = 1)
 
             # Коэффициент для приведения весов к виду [1;1]
             koeff_weights = 1.0
-            weights_converted = preprocess_forward(weights[i].copy(), koeff_weights)
-            wgt_bit = convert_to_fix_point(weights_converted.copy(), bit_precizion)
+            weights_converted = preprocess_forward(weights[i].copy(), koeff_weights) #xử lý weight (chia weight cho koeff_weight (hệ số))
+            wgt_bit = convert_to_fix_point(weights_converted.copy(), bit_precizion) # đưa weight về fix point
             for i3 in range(len(wgt_bit[0][0][0])):
                 for i2 in range(len(wgt_bit[0][0])):
                     for i0 in range(len(wgt_bit)):
@@ -1486,7 +1486,7 @@ def go_mat_model(model, bit_precizion):
             wgt_bit = convert_to_fix_point(weights_converted.copy(), bit_precizion)
             for i1 in range(len(wgt_bit[0])):
                 for i0 in range(len(wgt_bit)):
-                    list.append(wgt_bit[i0][i1])
+                    list.append(wgt_bit[i0][i1]) # 16x11
     return list
 
 
@@ -1496,7 +1496,7 @@ def preprocess_forward(arr, val):
     return arr1
 
 
-def convert_to_fix_point(arr1, bit):
+def convert_to_fix_point(arr1, bit):#weight và số bit
     arr2 = arr1.copy().astype(np.float32)
     arr2[arr2 < 0] = 0.0
     arr2 = np.round(np.abs(arr2) * (2 ** bit))
