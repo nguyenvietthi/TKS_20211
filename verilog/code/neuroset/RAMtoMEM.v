@@ -49,6 +49,7 @@ initial i=0;
 initial i_d=0;
 initial i1=0;
 
+//nextstep: suon duong, step tang len 1, tranh tranh bi ket o layer khong phai conv va dense
 always @(posedge nextstep) if (GO==1) step_n = 0; else step_n=step_n+1; // moi lan tang 1 don vi
 assign step_out=step+step_n;
 assign address=firstaddr+i;
@@ -57,6 +58,7 @@ assign address=firstaddr+i;
 always @(posedge clk) begin
 	if (GO==1) step=1; // GO -> layer 1 chay
 	sh=sh+1; // sh = ~sh (sh co 2 state la 0 va 1)
+
 	if (step_out==1) begin // doc pixel input 
 		if ((i<=lastaddr-firstaddr)&&(sh==0)) begin
 			//address=firstaddr+i;
@@ -77,6 +79,8 @@ always @(posedge clk) begin
 			i=0;
 		end
 	end
+
+	// duyet cac conv layer va dense layer
 	if ((step_out==2)||(step_out==4)||(step_out==6)||(step_out==8)||(step_out==10)||(step_out==12)||(step_out==14)) begin
 		if ((i<=lastaddr-firstaddr)&&(sh==0)) begin
 			addr=i1;
