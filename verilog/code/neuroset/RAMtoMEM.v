@@ -23,8 +23,8 @@ output reg we_p;
 output reg we_w;
 inout re_RAM; // read enable
 input nextstep;
-output reg signed [SIZE_1-1:0] dp;   //write data
-output reg signed [SIZE_9-1:0] dw;     //write weight
+output reg signed [SIZE_1-1:0] dp;   // pixel data
+output reg signed [SIZE_9-1:0] dw;     //weight data
 output reg [SIZE_address_pix-1:0] addrp;  // address pixel
 output reg [SIZE_address_wei-1:0] addrw;  // address weight
 output [4:0] step_out; // chon layer state
@@ -64,16 +64,16 @@ always @(posedge clk)
                     begin
                         //address=firstaddr+i;
 								addr=i;
-								if (step_out==1) we_p=1; // write enable pixel
+								if (step_out==1) we_p=1; // write enable pixel (database)
 					end
                 if ((i<=lastaddr-firstaddr)&&(sh==1))
                     begin
-                        if (we_p) 
+                        if (we_p) // write data vao database
 									begin
 											addrp=addr;
 											dp=0;
 											dp[SIZE_1-1:0]=data;
-											we_p=0;
+											we_p=0; // write unable pixel (database)
 									end
 									i=i+1;
 							end
