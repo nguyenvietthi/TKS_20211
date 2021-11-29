@@ -21,14 +21,14 @@ input signed [SIZE_1-1:0] data;
 output [12:0] address;
 output reg we_p;
 output reg we_w;
-inout re_RAM;
+inout re_RAM; // read enable
 input nextstep;
 output reg signed [SIZE_1-1:0] dp;   //write data
 output reg signed [SIZE_9-1:0] dw;     //write weight
-output reg [SIZE_address_pix-1:0] addrp;
-output reg [SIZE_address_wei-1:0] addrw;
-output [4:0] step_out;
-input GO;
+output reg [SIZE_address_pix-1:0] addrp;  // address pixel
+output reg [SIZE_address_wei-1:0] addrw;  // address weight
+output [4:0] step_out; // chon layer state
+input GO; 
 input [4:0] in_dense;
 		  
 reg [SIZE_address_pix-1:0] addr;
@@ -48,17 +48,23 @@ initial weight_case=0;
 initial i=0;
 initial i_d=0;
 initial i1=0;
+
+always @(posedge nextstep) if (GO==1) step_n = 0; else step_n=step_n+1; // moi lan tang 1 don vi
+assign step_out=step+step_n;
+assign address=firstaddr+i;
+
+
 always @(posedge clk)
     begin
-		  if (GO==1) step=1;
-		  sh=sh+1;
-				if (step_out==1)
+		  if (GO==1) step=1; // GO -> layer 1 chay
+		  sh=sh+1; // sh = ~sh (sh co 2 state la 0 va 1)
+				if (step_out==1) // doc pixel input 
 				   begin
 					if ((i<=lastaddr-firstaddr)&&(sh==0))
                     begin
                         //address=firstaddr+i;
 								addr=i;
-								if (step_out==1) we_p=1;
+								if (step_out==1) we_p=1; // write enable pixel
 					end
                 if ((i<=lastaddr-firstaddr)&&(sh==1))
                     begin
@@ -118,7 +124,4 @@ always @(posedge clk)
 				else
 					we_w=0;
     end
-always @(posedge nextstep) if (GO==1) step_n=0; else step_n=step_n+1;
-assign step_out=step+step_n;
-assign address=firstaddr+i;
 endmodule
