@@ -551,10 +551,10 @@ always @(negedge STOP_conv or posedge GO)
 					begin 
 						if (mem!=(4+(slvl*4))-1) slvl=slvl+1; 
 						else 
-                            begin 
-                                slvl=0; 
-                                lvl=lvl+1; 
-                            end 
+              begin 
+                  slvl=0; 
+                  lvl=lvl+1; 
+              end 
 					end
 				if (lvl==(filt+1))  
 					begin

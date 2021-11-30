@@ -1,0 +1,6 @@
+#!/bin/sh
+
+VCD=`ls *.vcd`
+if [ "${VCD}" != "" ]; then
+	gtkwave -S gtk.tcl -f ${VCD}&
+fi

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+\rm -rf *.vcd
+\rm -rf result
+\rm -rf *.log
+\rm -rf transcript
+\rm -rf work
