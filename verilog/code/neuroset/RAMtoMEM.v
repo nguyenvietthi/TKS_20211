@@ -84,7 +84,7 @@ always @(posedge clk) begin
 	if ((step_out==2)||(step_out==4)||(step_out==6)||(step_out==8)||(step_out==10)||(step_out==12)||(step_out==14)) begin
 		if ((i<=lastaddr-firstaddr)&&(sh==0)) begin
 			addr=i1;
-		end
+		end //ok
 		if ((i<=lastaddr-firstaddr)&&(sh==1)) begin
 			we_w=0;
 			addrw=addr;
