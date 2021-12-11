@@ -32,7 +32,7 @@ case (step)
 	  end
 3'd4: begin			//weights conv2
 		firstaddr = conv1;
-      lastaddr = conv2;
+    lastaddr = conv2;
 		re_RAM = 1;
       end		
 3'd6: begin			//weights conv3

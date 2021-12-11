@@ -21,7 +21,7 @@ input we_p,we_tp,we_w,    re_p,re_tp,re_w,clk;
 
 reg signed [SIZE_1-1:0] mem [0:picture_size*picture_size*8+picture_size*picture_size-1];
 reg signed [(SIZE_2)*1-1:0] mem_t [0:picture_size*picture_size*4-1];
-reg signed [SIZE_9-1:0] weight [0:256];
+reg signed [SIZE_9-1:0] weight [0:256]; // ghép tất cả các width thành 1 bus
 always @ (posedge clk)
     begin
         if (we_p) mem[write_addressp] <= dp;

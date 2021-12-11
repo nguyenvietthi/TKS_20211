@@ -2,7 +2,7 @@ module conv(clk, Y1, prov, matrix, matrix2, i, w1, w2, w3, w4, w5, w6, w7, w8, w
 parameter SIZE=23;
 input clk;
 output reg signed [SIZE+SIZE-2:0] Y1;
-input [1:0] prov;
+input [1:0] prov; // kích thước khung pixel để conv với kernel 
 input [4:0] matrix;
 input [9:0] matrix2;
 input [9:0] i;
