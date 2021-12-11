@@ -1,6 +1,6 @@
 module addressRAM(
 	input [4:0] step,
-	output reg re_RAM,
+	output reg re_RAM, // read from RAM enable
 	output reg [12:0] firstaddr, lastaddr
 );
 parameter picture_size = 0; // kích thước ảnh 28

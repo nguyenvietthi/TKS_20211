@@ -1,4 +1,4 @@
-module memorywork(clk,data,address,we_p,we_w,re_RAM,nextstep,dp,dw,addrp,addrw,step_out,GO,in_dense);
+module (clk,data,address,we_p,we_w,re_RAM,nextstep,dp,dw,addrp,addrw,step_out,GO,in_dense);
 
 parameter num_conv=0;
 
@@ -17,19 +17,19 @@ parameter SIZE_address_pix=0;
 parameter SIZE_address_wei=0;
 
 inout clk;
-input signed [SIZE_1-1:0] data;
-output [12:0] address;
-output reg we_p;
-output reg we_w;
+input signed [SIZE_1-1:0] data;//	dia chi va du lieu doc ra tu ram
+output [12:0] address;         // 	dia chi va du lieu doc ra tu ram
+output reg we_p;       // write enable pixel
+output reg we_w;      // write enable weight 
 inout re_RAM; // read enable
-input nextstep;
+input nextstep; // tang step_out để chọn các lớp chập sau khi đã xong các lớp không chaap khác (2,4,6,8,10,12,14)
 output reg signed [SIZE_1-1:0] dp;   // pixel data
 output reg signed [SIZE_9-1:0] dw;     //weight data
 output reg [SIZE_address_pix-1:0] addrp;  // address pixel
-output reg [SIZE_address_wei-1:0] addrw;  // address weight
+output reg [SIZE_address_wei-1:0] addrw;  // address weight (vi tri cac kernel)
 output [4:0] step_out; // chon layer state
-input GO; 
-input [4:0] in_dense;
+input GO; // ghi pixel data vào data base
+input [4:0] in_dense; // weight input width
 		  
 reg [SIZE_address_pix-1:0] addr;
 wire [12:0] firstaddr,lastaddr;
@@ -86,8 +86,8 @@ always @(posedge clk) begin
 			addr=i1;
 		end //ok
 		if ((i<=lastaddr-firstaddr)&&(sh==1)) begin
-			we_w=0;
-			addrw=addr;
+			we_w=0; //write unable weight
+			addrw=addr; // address weight
 			if (weight_case!=0) i=i+1; 
 			if (step_out==14) if (i_d==(in_dense)) begin  
 				dw=buff; 
@@ -96,13 +96,13 @@ always @(posedge clk) begin
 				i_d=0; 
 				i1=i1+1; 
 			end
-			case (weight_case)
+			case (weight_case)  // lấy 9 phần tử trong kernel 
 				0: ;
 				1: begin buff=0; buff[SIZE_9-1:SIZE_8]=data; end   
 				2: buff[SIZE_8-1:SIZE_7]=data; 
 				3: buff[SIZE_7-1:SIZE_6]=data;  
 				4: buff[SIZE_6-1:SIZE_5]=data;  
-				5: buff[SIZE_5-1:SIZE_4]=data; .
+				5: buff[SIZE_5-1:SIZE_4]=data; 
 				6: buff[SIZE_4-1:SIZE_3]=data;  
 				7: buff[SIZE_3-1:SIZE_2]=data;  
 				8: buff[SIZE_2-1:SIZE_1]=data;   

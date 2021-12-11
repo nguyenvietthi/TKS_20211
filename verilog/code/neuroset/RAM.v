@@ -17,7 +17,7 @@ input signed [SIZE_9-1:0] dw;   //write weight
 input [SIZE_address_pix-1:0] write_addressp, read_addressp;
 input [SIZE_address_pix_t-1:0] write_addresstp, read_addresstp;
 input [SIZE_address_wei-1:0] write_addressw, read_addressw;
-input we_p,we_tp,we_w,re_p,re_tp,re_w,clk;
+input we_p,we_tp,we_w,    re_p,re_tp,re_w,clk;
 
 reg signed [SIZE_1-1:0] mem [0:picture_size*picture_size*8+picture_size*picture_size-1];
 reg signed [(SIZE_2)*1-1:0] mem_t [0:picture_size*picture_size*4-1];

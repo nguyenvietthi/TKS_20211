@@ -2,9 +2,9 @@ module TOP #(parameter SIZE_1 = 11)(
   input                         clk               ,
   input                         GO                ,
   output       [3:0]            RESULT            ,
-  input                         we_database       ,
-  input signed [SIZE_1-1:0]     dp_database       ,
-  input        [12:0]           address_p_database,
+  input                         we_database       , // nạp pixel data vào database
+  input signed [SIZE_1-1:0]     dp_database       , // nạp pixel data vào database
+  input        [12:0]           address_p_database, // nạp pixel data vào database
   output reg                    STOP               
 );
 
@@ -121,15 +121,6 @@ reg [4:0] in_dense;
 reg [3:0] out_dense;
 reg nozero_dense;
 
-database #(SIZE_1) database (
-  .clk       (clk)                ,
-  .datata    (data)               ,
-  .re        (re_RAM)             ,
-  .address   (address)            ,
-  .we        (we_database)        ,
-  .dp        (dp_database)        ,
-  .address_p (address_p_database)
-);
 conv_TOP #(
   num_conv          ,
   SIZE_1            ,
@@ -197,6 +188,18 @@ conv_TOP #(
   bias,
   globmaxp_en
 );
+
+database #(SIZE_1) database (
+  .clk       (clk)                ,
+  .datata    (data)               ,
+  .re        (re_RAM)             ,
+  .address   (address)            ,
+  
+  .we        (we_database)        , // nạp pixel data vào database 
+  .dp        (dp_database)        , // nạp pixel data vào database 
+  .address_p (address_p_database) // nạp pixel data vào database 
+);
+
 memorywork #(
   num_conv,
   picture_size,
