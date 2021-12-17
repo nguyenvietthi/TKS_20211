@@ -100,8 +100,10 @@ wire [9:0] i_conv;
 wire signed [SIZE_2-2:0] Y1;
 wire signed [SIZE_1-1:0] w11,w12,w13,w14,w15,w16,w17,w18,w19;
 wire signed [SIZE_1-1:0] p11,p12,p13,p14,p15,p16,p17,p18,p19;
+
 wire signed [SIZE_1-1:0] w11_c,w12_c,w13_c,w14_c,w15_c,w16_c,w17_c,w18_c,w19_c;
 wire signed [SIZE_1-1:0] p1_c,p2_c,p3_c,p4_c,p5_c,p6_c,p7_c,p8_c,p9_c;
+
 wire signed [SIZE_1-1:0] w11_d,w12_d,w13_d,w14_d,w15_d,w16_d,w17_d,w18_d,w19_d;
 wire signed [SIZE_1-1:0] p11_d,p12_d,p13_d,p14_d,p15_d,p16_d,p17_d,p18_d,p19_d;
 wire go_conv;
@@ -412,7 +414,7 @@ begin
 
     if (STOP==0)
     begin
-	    if ((TOPlvl==1)&&(step==3))
+	    if ((TOPlvl==1)&&(step==3)) // thực hiện chập (CONV1)
 		    begin
 			    memstartp = picture_storage_limit;
 			    memstartzap = picture_storage_limit_2;
@@ -568,8 +570,11 @@ always @(negedge STOP_conv or posedge GO)
 	end
 
 assign memstartw_lvl = memstartw+lvl+slvl*(4*(filt+1))+num*(filt+1)*num_conv;
+
+
 assign memstartzap_num = memstartzap+(((globmaxp_en==1)&&(lvl==filt))?(slvl*(4>>(num_conv>>1))+num):((conv_en==1)?(num*matrix2+slvl*matrix2*((4>>(num_conv>>1)))):((maxp_en==1)?num_maxp*(matrix2>>2):0)));
 assign memstartp_lvl = memstartp+(lvl>>(num_conv>>1))*matrix2+((maxp_en==1)?num_maxp*matrix2:0);   //new!
+
 	
 assign re_p = (conv_en==1)?re_conv:((maxp_en==1)?re_maxp:((dense_en==1)?re_p_dense:((result_en==1)?re_p_res:0)));
 assign re_w = (conv_en==1)?re_wb_conv:((dense_en==1)?re_w_dense:0);

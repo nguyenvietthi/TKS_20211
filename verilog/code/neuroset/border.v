@@ -7,7 +7,7 @@ module border(
 reg [10:0] j;
 always @(posedge clk)
 begin
-    if (go == 1)
+    if (go == 1) // enable conv
     begin
         prov = 0;
         for (j = 1'b1; j <= matrix; j = j + 1'b1)
