@@ -412,23 +412,26 @@ begin
     end
     else nextstep=0;
 
+    //khi STOP, quá trình nạp ảnh vào database đã xong.
+    // địa chỉ của đầu vào(memstartp) và đầu ra (memstartzap after pixel) sẽ đảo cho nhau => tức là lớp sau này sẽ lấy địa chỉ của after pixel là input. (cả input và output của mỗi layer sẽ cùng lưu vào 1 trường mem trong RAM).   |//////////////(3136)|//////////////
+
     if (STOP==0)
     begin
 	    if ((TOPlvl==1)&&(step==3)) // thực hiện chập (CONV1)
 		    begin
-			    memstartp = picture_storage_limit;
-			    memstartzap = picture_storage_limit_2;
+			    memstartp = picture_storage_limit; //0
+			    memstartzap = picture_storage_limit_2; //3136
 			    conv_en = 1;
 			    mem = 3;
 			    filt = 0;
-			    matrix = 28;
+			    matrix = 28; // kích thước đầu ra
 			    globmaxp_en = 0;
 		    end	
 	    if ((TOPlvl==2)&&(step==3)) nextstep = 1;
 	    if ((TOPlvl==2)&&(step==5))
 		    begin
-			    memstartp = picture_storage_limit_2;
-			    memstartzap = picture_storage_limit;
+			    memstartp = picture_storage_limit_2; //3136
+			    memstartzap = picture_storage_limit; //0
 			    conv_en = 1;
 			    mem = 3;
 			    filt = 3;
@@ -573,6 +576,7 @@ assign memstartw_lvl = memstartw+lvl+slvl*(4*(filt+1))+num*(filt+1)*num_conv;
 
 
 assign memstartzap_num = memstartzap+(((globmaxp_en==1)&&(lvl==filt))?(slvl*(4>>(num_conv>>1))+num):((conv_en==1)?(num*matrix2+slvl*matrix2*((4>>(num_conv>>1)))):((maxp_en==1)?num_maxp*(matrix2>>2):0)));
+
 assign memstartp_lvl = memstartp+(lvl>>(num_conv>>1))*matrix2+((maxp_en==1)?num_maxp*matrix2:0);   //new!
 
 	

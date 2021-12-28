@@ -14,18 +14,29 @@ parameter SIZE_address_pix=0;
 parameter SIZE_address_pix_t=0;
 parameter SIZE_address_wei=0;
 
+// đưa vào các địa chỉ bắt đầu của weight 
+
+
 input clk,conv_en,globmaxp_en;
-input [1:0] prov;
+input [1:0] prov; // không dùng
 input [4:0] matrix;
 input [9:0] matrix2;
-input [SIZE_address_pix-1:0] memstartp; 
-input [SIZE_address_wei-1:0] memstartw;
-input [SIZE_address_pix-1:0] memstartzap;                  																	
+
+input [SIZE_address_pix-1:0] memstartp;  // địa chỉ bắt đầu pixel
+input [SIZE_address_wei-1:0] memstartw;  // địa chỉ bắt đầu weight
+input [SIZE_address_pix-1:0] memstartzap; //(mem start after pixel) địa chỉ bắt đầu của input của layer, tức là output của layer trước đó
+
+// ví dụ: conv1: OUT: 28*28*4 nó sẽ lưu 4 vùng địa chỉ liên tiếp, mỗi vùng có 28*28 giá trị.
+//      ở conv2: sẽn chập với 3*3*4*4: vùng giá trị trước đó(memstartz_after_p) sẽ được châp với các kernel sau đó lưu 28*28*4 tuowgn tự conv1
+
+// conv3: 14*14*8 sẽ lưu thành 8 vùng mỗi vùng có 14*14 giá trị
+
 input [4:0] lvl;
 input [1:0] slvl;
 output reg [SIZE_address_pix-1:0] read_addressp;
 output reg [SIZE_address_pix_t-1:0] read_addresstp;
 output reg [SIZE_address_wei-1:0] read_addressw;
+
 output reg [SIZE_address_pix-1:0] write_addressp;
 output reg [SIZE_address_pix_t-1:0] write_addresstp;
 output reg we,re,re_wb;
@@ -33,21 +44,34 @@ output reg we_t,re_t;
 input signed [SIZE_1-1:0] qp;
 input signed [SIZE_2*1-1:0] qtp;
 input signed [SIZE_9-1:0] qw;
+
 output signed [SIZE_1-1:0] dp;
 output signed [SIZE_2*1-1:0] dtp;
 output reg STOP;
 output [9:0] i_2;
 input signed [SIZE_1+SIZE_1-2:0] Y1;
 output reg signed [SIZE_1-1:0] w15,w14,w16,w13,w17,w12,w18,w11,w19;
-output reg signed [SIZE_1-1:0]p1,p2,p3,p4,p5,p6,p7,p8,p9;
+output reg signed [SIZE_1-1:0] p1,p2,p3,p4,p5,p6,p7,p8,p9;
 output reg go;
 input [2:0] num;
 input [4:0] filt;
 input bias;
 
+
+//là các giá trị được nạp vào dp
 reg signed [SIZE_1-1:0] res_out_1;
-reg signed [SIZE_1+SIZE_1-2+1:0] res1;
-reg signed [SIZE_1+SIZE_1-2+1:0] res_old_1;
+//res_out_1 = lấy 11 bit đầu của res1
+
+
+reg signed [SIZE_1+SIZE_1-2+1:0] res1;// giá trị mới của kerner chập hiện tại. res1 = Y1 + res_old_1
+
+reg signed [SIZE_1+SIZE_1-2+1:0] res_old_1;//giá trị cũ của phép chập kerner với trước đó
+
+//res1 luôn được nạp vào mem_t (RAM) trong khi chập xong 1 lớp input với kernel. 
+
+//sau khi thực hiện chập xong 1 lớp input với kernel. 
+// data sẽ dược nạp vào mem (RAM) và cắt đi 11 bít (res1)=> đây gọi là làm tròn sau khi thực hiện tính toán => đạt độ chính xác cao nhất
+
 reg signed [SIZE_1-1:0] globmaxp_perem_1;
 
 reg signed [SIZE_1-1:0] buff0 [2:0];
@@ -72,49 +96,49 @@ if (conv_en==1)        //enable convolution
 		   case (marker)
 				0: begin re_wb=1; read_addressw=memstartw+(2'd0*(filt+1)); end
 				1: begin end
-				2: begin							w11=qw[SIZE_1-1:0]; 
-							w12=qw[SIZE_2-1:SIZE_1]; 
-							w13=qw[SIZE_3-1:SIZE_2]; 
-							w14=qw[SIZE_4-1:SIZE_3]; 
-							w15=qw[SIZE_5-1:SIZE_4]; 
-							w16=qw[SIZE_6-1:SIZE_5]; 
-							w17=qw[SIZE_7-1:SIZE_6]; 
-							w18=qw[SIZE_8-1:SIZE_7]; 
-							w19=qw[SIZE_9-1:SIZE_8]; 
- end
+				2: begin							
+						w11=qw[SIZE_1-1:0]; 
+						w12=qw[SIZE_2-1:SIZE_1]; 
+						w13=qw[SIZE_3-1:SIZE_2]; 
+						w14=qw[SIZE_4-1:SIZE_3]; 
+						w15=qw[SIZE_5-1:SIZE_4]; 
+						w16=qw[SIZE_6-1:SIZE_5]; 
+						w17=qw[SIZE_7-1:SIZE_6]; 
+						w18=qw[SIZE_8-1:SIZE_7]; 
+						w19=qw[SIZE_9-1:SIZE_8]; 
+ 					end
 				3: begin zagryzka_weight=1; re_wb=0; marker=-1; end
 				default: $display("Check zagryzka_weight");
-		endcase
-		marker=marker+1;
+			endcase
+
+			marker=marker+1;
 		end
 		else
 		begin
 			re=1;
 			case (marker)
 				0: begin		
-								re_t=0;
-								read_addressp=i+memstartp; 
-								if ((i-1)<matrix2-matrix) 
-								begin
-								buff2[2]=qp[SIZE_1-1:0];
-								end
-								else buff2[2]=0;
-								
-								if (i>=2) go=1;
-								
-								
-								p1=buff1[1];  //center
-								p2=buff1[2];  //right
-								p3=buff1[0];  //left
-								p8=buff2[0];  //downright
-								p7=buff0[2];  //up
-								p4=buff2[1];  //downleft 
-								p5=buff0[1];  //upright
-								p9=buff2[2];  //upleft
-								p6=buff0[0];  //down 
-								
-								
+						re_t=0;
+						read_addressp=i+memstartp; 
+						if ((i-1)<matrix2-matrix) 
+						begin
+						buff2[2]=qp[SIZE_1-1:0];
+						end
+						else buff2[2]=0;
+						
+						if (i>=2) go=1;
+												
+						p1=buff1[1];  //center    //|--      --|--      --|--      --| 
+						p2=buff1[2];  //right     //| buff2[2] | buff0[2] | buff0[1] | 
+						p3=buff1[0];  //left      //|--      --|--     -- |--      --|
+						p8=buff2[0];  //downright //| buff1[0] | buff1[1] | buff1[2] |  
+						p7=buff0[2];  //up        //|--      --|--      --|--      --|
+						p4=buff2[1];  //downleft  //| buff2[1] | buff0[0] | buff2[0] |  
+						p5=buff0[1];  //upright   //|--      --|--      --|--      --|  
+						p9=buff2[2];  //upleft  			
+						p6=buff0[0];  //down        								pixel
 					end
+
 				1: begin		if (i>=matrix-1) read_addressp=i-matrix+memstartp;
 								res_old_1=qtp[(SIZE_2)*1-1:0];
 								
