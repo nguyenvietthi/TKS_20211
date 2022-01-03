@@ -162,7 +162,7 @@ def get_image_set(path):
 
 
 if __name__ == '__main__':
-    use_image = 123 # anh thu 35 trong 153 cai anh
+    use_image = 100 # anh thu 35 trong 153 cai anh
     bp = 12
     ROOT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '/'
     images, answers = get_image_set(ROOT_PATH)
