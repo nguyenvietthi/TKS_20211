@@ -435,7 +435,7 @@ begin
 			    conv_en = 1;
 			    mem = 3;
 			    filt = 3;
-			    matrix = 28;
+			    matrix = 28;// kích thước đầu ra
 			    globmaxp_en = 0;
 		    end	
 	    if ((TOPlvl==3)&&(STOP_maxp==0))

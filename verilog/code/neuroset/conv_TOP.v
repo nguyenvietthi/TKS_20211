@@ -70,7 +70,7 @@ reg signed [SIZE_1+SIZE_1-2+1:0] res_old_1;//giá trị cũ của phép chập k
 //res1 luôn được nạp vào mem_t (RAM) trong khi chập xong 1 lớp input với kernel. 
 
 //sau khi thực hiện chập xong 1 lớp input với kernel. 
-// data sẽ dược nạp vào mem (RAM) và cắt đi 11 bít (res1)=> đây gọi là làm tròn sau khi thực hiện tính toán => đạt độ chính xác cao nhất
+//data sẽ dược nạp vào mem (RAM) và cắt đi 11 bít (res1)=> đây gọi là làm tròn sau khi thực hiện tính toán => đạt độ chính xác cao nhất
 
 reg signed [SIZE_1-1:0] globmaxp_perem_1;
 
