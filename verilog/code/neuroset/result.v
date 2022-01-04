@@ -6,24 +6,24 @@ parameter SIZE_3=0;
 parameter SIZE_4=0;
 parameter SIZE_address_pix=0;
 
-input clk,enable;
-output reg STOP;
-input [SIZE_address_pix-1:0] memstartp;
+input clk,enable;  //result enable
+output reg STOP;  // stop result
+input [SIZE_address_pix-1:0] memstartp; // địa chỉ bắt đầu của pixel trong mem(RAM)
 input [SIZE_1-1:0] qp;
 output reg re;
 output reg [SIZE_address_pix-1:0] read_addressp;
 output reg [3:0] RESULT;
 
 reg [3:0] marker;
-reg signed [SIZE_1-1:0] buff;
+reg signed [SIZE_1-1:0] buff; //lưu result có giá trị lớn nhất
 
 wire signed [SIZE_1-1:0]  p1;
 always @(posedge clk)
 begin
 if (enable==1)
 begin
-re=1;
-case (marker)
+re=1; // đọc từ RAM enable
+case (marker) // duyệt qua 12 case ( 0 - 11 kết quả) cái nào có giá trị lớn nhất là kết quả detect
 	0: begin read_addressp=memstartp+0; end
 	1: begin read_addressp=memstartp+1; buff = 0; end
 	2: begin read_addressp=memstartp+2; if (p1>=buff) begin buff=p1; RESULT=0; end end
@@ -43,9 +43,9 @@ marker=marker+1;
 end
 else 
 begin
-re=0;
-marker=0;
-STOP=0;
+	re=0;
+	marker=0;
+	STOP=0;
 end
 end
 
