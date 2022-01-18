@@ -108,7 +108,7 @@ def get_image_set(path):
 
 
 if __name__ == '__main__':
-    use_image = 10
+    use_image = 15
     bp = 11
     ROOT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '/'
     images, answers = get_image_set(ROOT_PATH)

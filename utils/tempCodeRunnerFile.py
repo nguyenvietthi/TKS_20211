@@ -1,0 +1,6 @@
+    images, answers = get_image_set(ROOT_PATH)
+    print('Total images read: {}. Image number for testbench: {}'.format(len(images), use_image))
+    print('Bit precision: {} (with sign: {})'.format(bp, bp+1))
+    out_path = ROOT_PATH + "verilog/code/testbench.v".format(bp+1, use_image, answers[use_image])
+    generate_test_image_memory_verilog(images[use_image], answers[use_image], bp+1, out_path, 'bin')
+    print('Answers: {}'.format(answers[use_image]))

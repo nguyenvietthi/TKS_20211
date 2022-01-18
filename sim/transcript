@@ -1,204 +1,35 @@
 # OpenFile neural_net.mpf
 # Loading project neural_net
-# Compile of addressRAM.v was successful.
-# Compile of border.v was successful.
-# Compile of conv.v was successful.
 # Compile of conv_TOP.v was successful.
 # Compile of database.v was successful.
-# Compile of dense.v was successful.
 # Compile of maxpooling.v was successful.
-# Compile of RAM.v was successful.
-# Compile of result.v failed with 1 errors.
-# Compile of TOP.v failed with 4 errors.
-# 10 compiles, 2 failed with 5 errors.
-# Compile of result.v failed with 1 errors.
-# Compile of TOP.v was successful.
-# 2 compiles, 1 failed with 1 error.
 # Compile of result.v was successful.
-vsim work.test
-# vsim work.test 
-# Start time: 22:55:33 on Nov 25,2021
-# Loading work.test
-# Loading work.TOP
-# Loading work.database
-# Loading work.conv_TOP
-# Loading work.memorywork
-# Loading work.addressRAM
-# Loading work.RAM
-# Loading work.border
-# Loading work.maxp
-# Loading work.dense
-# Loading work.result
-# Loading work.conv
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v(16): [PCDPC] - Port size (11) does not match connection size (12) for port 'dp_database'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (2) does not match connection size (13) for port 'prov'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (5) does not match connection size (9) for port 'matrix'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (10) does not match connection size (13) for port 'matrix2'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(23).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (9) does not match connection size (13) for port 'memstartw'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(25).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (13) does not match connection size (12) for port 'memstartzap'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(26).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (5) does not match connection size (12) for port 'lvl'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(27).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (2) does not match connection size (9) for port 'slvl'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(28).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (13) does not match connection size (1) for port 'read_addressp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (12) does not match connection size (1) for port 'read_addresstp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(30).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (9) does not match connection size (1) for port 'read_addressw'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(31).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (13) does not match connection size (1) for port 'write_addressp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(32).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (12) does not match connection size (1) for port 'write_addresstp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(33).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (1) does not match connection size (11) for port 'we'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(34).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (1) does not match connection size (22) for port 're'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(35).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (1) does not match connection size (99) for port 're_wb'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(36).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (1) does not match connection size (11) for port 'we_t'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(37).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (1) does not match connection size (22) for port 're_t'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(38).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (11) does not match connection size (2) for port 'qp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(39).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (22) does not match connection size (5) for port 'qtp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(40).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (99) does not match connection size (10) for port 'qw'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (11) does not match connection size (10) for port 'dp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(42).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Error (suppressible): (vsim-3053) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): Illegal output or inout port connection for port 'dtp'.
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (22) does not match connection size (5) for port 'dtp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(43).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Error (suppressible): (vsim-3053) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): Illegal output or inout port connection for port 'STOP'.
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (1) does not match connection size (2) for port 'STOP'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (10) does not match connection size (21) for port 'i_2'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(45).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (21) does not match connection size (11) for port 'Y1'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(46).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (11) does not match connection size (1) for port 'p9'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(64).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Error (suppressible): (vsim-3053) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): Illegal output or inout port connection for port 'go'.
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (1) does not match connection size (3) for port 'go'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(65).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (3) does not match connection size (5) for port 'num'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(66).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(149): [PCDPC] - Port size (5) does not match connection size (1) for port 'filt'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv_TOP.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/RAMtoMEM.v(50): [PCDPC] - Port size (1) does not match connection size (13) for port 'lastaddr'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/addressRAM.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/block/inst_1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/addressRAM.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): [PCDPC] - Port size (1) does not match connection size (13) for port 'STOP'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/maxpooling File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): [PCDPC] - Port size (13) does not match connection size (1) for port 'write_addressp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v(16).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/maxpooling File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): [PCDPC] - Port size (1) does not match connection size (11) for port 'we'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/maxpooling File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): [PCDPC] - Port size (11) does not match connection size (1) for port 'dp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/maxpooling File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): [PCDPC] - Port size (5) does not match connection size (10) for port 'matrix'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/maxpooling File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): [PCDPC] - Port size (10) does not match connection size (5) for port 'matrix2'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/maxpooling File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/maxpooling.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(304): [PCDPC] - Port size (5) does not match connection size (1) for port 'in_dense'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v(52).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/dense File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(304): [PCDPC] - Port size (1) does not match connection size (5) for port 'nozero'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v(53).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/dense File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/dense.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(351): [PCDPC] - Port size (11) does not match connection size (13) for port 'qp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/result File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(351): [PCDPC] - Port size (1) does not match connection size (11) for port 're'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/result File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(351): [PCDPC] - Port size (13) does not match connection size (1) for port 'read_addressp'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/result File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/result.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(362): [PCDPC] - Port size (2) does not match connection size (21) for port 'prov'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(362): [PCDPC] - Port size (5) does not match connection size (2) for port 'matrix'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(362): [PCDPC] - Port size (10) does not match connection size (5) for port 'matrix2'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(362): [PCDPC] - Port size (11) does not match connection size (10) for port 'w1'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(362): [PCDPC] - Port size (1) does not match connection size (11) for port 'conv_en'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v(30).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
-# ** Error (suppressible): (vsim-3053) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(362): Illegal output or inout port connection for port 'Y1'.
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(362): [PCDPC] - Port size (21) does not match connection size (1) for port 'Y1'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v(32).
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP/conv1 File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/conv.v
-# Error loading design
-# End time: 22:55:33 on Nov 25,2021, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 48
-# Compile of TOP.v was successful.
-vsim work.test
-# vsim work.test 
-# Start time: 23:04:51 on Nov 25,2021
-# Loading work.test
-# Loading work.TOP
-# Loading work.database
-# Loading work.conv_TOP
-# Loading work.memorywork
-# Loading work.addressRAM
-# Loading work.RAM
-# Loading work.border
-# ** Error: (vsim-3033) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): Instantiation of 'maxpooling' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
-#         Searched libraries:
-#             D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/sim/work
-# Loading work.dense
-# Loading work.result
-# Loading work.conv
-# Error loading design
-# End time: 23:04:52 on Nov 25,2021, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# Compile of addressRAM.v was successful.
-# Compile of border.v was successful.
-# Compile of conv.v was successful.
-# Compile of conv_TOP.v was successful.
-# Compile of database.v was successful.
-# Compile of dense.v was successful.
-# Compile of maxpooling.v was successful.
-# Compile of RAM.v was successful.
 # Compile of RAMtoMEM.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of testbench_answ_4.v was successful.
+# Compile of testbench_answ_1.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of addressRAM.v was successful.
+# Compile of border.v was successful.
+# Compile of conv.v was successful.
+# Compile of conv_TOP.v was successful.
+# Compile of database.v was successful.
+# Compile of dense.v was successful.
+# Compile of maxpooling.v was successful.
+# Compile of RAM.v was successful.
 # Compile of result.v was successful.
-# 10 compiles, 0 failed with no errors.
-vsim work.test
-# vsim work.test 
-# Start time: 23:24:17 on Nov 25,2021
-# Loading work.test
-# Loading work.TOP
-# Loading work.database
-# Loading work.conv_TOP
-# Loading work.memorywork
-# Loading work.addressRAM
-# Loading work.RAM
-# Loading work.border
-# ** Error: (vsim-3033) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(276): Instantiation of 'maxpooling' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
-#         Searched libraries:
-#             D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/sim/work
-# Loading work.dense
-# Loading work.result
-# Loading work.conv
-# Error loading design
-# End time: 23:24:17 on Nov 25,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
 # Compile of TOP.v was successful.
+# Compile of RAMtoMEM.v was successful.
+# Compile of testbench_answ_1.v was successful.
+# 12 compiles, 0 failed with no errors.
 vsim work.test
 # vsim work.test 
-# Start time: 23:25:27 on Nov 25,2021
+# Start time: 11:50:51 on Jan 18,2022
 # Loading work.test
 # Loading work.TOP
-# Loading work.database
 # Loading work.conv_TOP
+# Loading work.database
 # Loading work.memorywork
 # Loading work.addressRAM
 # Loading work.RAM
@@ -207,15 +38,53 @@ vsim work.test
 # Loading work.dense
 # Loading work.result
 # Loading work.conv
-# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v(16): [PCDPC] - Port size (11) does not match connection size (12) for port 'dp_database'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(6).
+# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench_answ_1.v(16): [PCDPC] - Port size (11) does not match connection size (12) for port 'dp_database'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(6).
 #    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
 # WARNING: No extended dataflow license exists
 run -all
 # Check case result
-# RESULT:  7
-# ** Note: $finish    : D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v(49)
+# RESULT:  1
+# ** Note: $finish    : D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench_answ_1.v(49)
 #    Time: 4735150 ps  Iteration: 1  Instance: /test
 # 1
-# Break in Module test at D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench.v line 49
-# End time: 23:28:43 on Nov 25,2021, Elapsed time: 0:03:16
-# Errors: 0, Warnings: 1
+# Break in Module test at D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench_answ_1.v line 49
+restart
+# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench_answ_1.v(16): [PCDPC] - Port size (11) does not match connection size (12) for port 'dp_database'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
+# Compile of addressRAM.v was successful.
+# Compile of border.v was successful.
+# Compile of conv.v was successful.
+# Compile of conv_TOP.v was successful.
+# Compile of database.v was successful.
+# Compile of dense.v was successful.
+# Compile of maxpooling.v was successful.
+# Compile of RAM.v was successful.
+# Compile of result.v was successful.
+# Compile of TOP.v was successful.
+# Compile of RAMtoMEM.v was successful.
+# Compile of testbench_answ_4.v was successful.
+# 12 compiles, 0 failed with no errors.
+restart
+# Loading work.test
+# Loading work.TOP
+# Loading work.conv_TOP
+# Loading work.database
+# Loading work.memorywork
+# Loading work.addressRAM
+# Loading work.RAM
+# Loading work.border
+# Loading work.maxp
+# Loading work.dense
+# Loading work.result
+# Loading work.conv
+# ** Warning: (vsim-3015) D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench_answ_4.v(16): [PCDPC] - Port size (11) does not match connection size (12) for port 'dp_database'. The port definition is at: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /test/TOP File: D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/neuroset/TOP.v
+run -all
+# Check case result
+# RESULT:  4
+# ** Note: $finish    : D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench_answ_4.v(49)
+#    Time: 4735150 ps  Iteration: 1  Instance: /test
+# 1
+# Break in Module test at D:/OneDrive - Hanoi University of Science and Technology/NAM 4/20211/TKS/BTL/CNN_FPGA/verilog/code/testbench_answ_4.v line 49
+# End time: 11:52:15 on Jan 18,2022, Elapsed time: 0:01:24
+# Errors: 0, Warnings: 4

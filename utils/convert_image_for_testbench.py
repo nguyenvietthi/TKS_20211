@@ -42,9 +42,9 @@ def convert_to_normalized_form(value, reduction=10, precision=12):
     return sign, dec, bin
 
 
-def generate_test_image_memory_verilog(image, answer, precision, out_file, type):
+def generate_test_image_memory_verilog(image, answer, precision, out_file, type, number):
     out = open(out_file, "w")
-    out.write('module test();\n')
+    out.write(f'module test{number}();\n')
     out.write('\n')
     out.write('parameter SIZE=12;\n')
     out.write('\n')
@@ -149,7 +149,7 @@ def prepare_image(im_path):
 def get_image_set(path):
     # Real images from camera
     expected_answ = []
-    files = glob.glob(path + 'dataset/test/*/*.png')
+    files = glob.glob(path + 'dataset/real_test/*/*.png')
     image_list = []
     for f in files:
         answ = int(os.path.basename(os.path.dirname(f)))
@@ -162,12 +162,14 @@ def get_image_set(path):
 
 
 if __name__ == '__main__':
-    use_image = 100 # anh thu 35 trong 153 cai anh
-    bp = 12
-    ROOT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '/'
-    images, answers = get_image_set(ROOT_PATH)
-    print('Total images read: {}. Image number for testbench: {}'.format(len(images), use_image))
-    print('Bit precision: {} (with sign: {})'.format(bp, bp+1))
-    out_path = ROOT_PATH + "verilog/code/testbench.v".format(bp+1, use_image, answers[use_image])
-    generate_test_image_memory_verilog(images[use_image], answers[use_image], bp+1, out_path, 'bin')
-    print('Answers: {}'.format(answers[use_image]))
+    # use_image = 0 # anh thu 35 trong 153 cai anh
+    for use_image in range(30):
+        bp = 12
+        ROOT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '/'
+        print(ROOT_PATH)
+        images, answers = get_image_set(ROOT_PATH)
+        print('Total images read: {}. Image number for testbench: {}'.format(len(images), use_image))
+        print('Bit precision: {} (with sign: {})'.format(bp, bp+1))
+        out_path = ROOT_PATH + "verilog/code/tb/testbench_answ_{}_{}.v".format(answers[use_image], use_image)
+        generate_test_image_memory_verilog(images[use_image], answers[use_image], bp+1, out_path, 'bin', use_image)
+        print('Answers: {}'.format(answers[use_image]))

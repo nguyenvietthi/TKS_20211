@@ -16,7 +16,6 @@ parameter SIZE_address_wei=0;
 
 // đưa vào các địa chỉ bắt đầu của weight 
 
-
 input clk,conv_en,globmaxp_en;
 input [1:0] prov; // không dùng
 input [4:0] matrix;
@@ -31,7 +30,7 @@ input [SIZE_address_pix-1:0] memstartzap; //(mem start after pixel) địa chỉ
 
 // conv3: 14*14*8 sẽ lưu thành 8 vùng mỗi vùng có 14*14 giá trị
 
-input [4:0] lvl;
+input [4:0] lvl; // duyệt từng lớp của filter (level)
 input [1:0] slvl;
 output reg [SIZE_address_pix-1:0] read_addressp;
 output reg [SIZE_address_pix_t-1:0] read_addresstp;
@@ -48,15 +47,14 @@ input signed [SIZE_9-1:0] qw;
 output signed [SIZE_1-1:0] dp;
 output signed [SIZE_2*1-1:0] dtp;
 output reg STOP;
-output [9:0] i_2;
+output [9:0] i_2; // vị trí pixel trong ảnh đầu vào
 input signed [SIZE_1+SIZE_1-2:0] Y1;
 output reg signed [SIZE_1-1:0] w15,w14,w16,w13,w17,w12,w18,w11,w19;
 output reg signed [SIZE_1-1:0] p1,p2,p3,p4,p5,p6,p7,p8,p9;
 output reg go;
 input [2:0] num;
-input [4:0] filt;
-input bias;
-
+input [4:0] filt; // số lớp của filter của các lớp chập
+input bias;       
 
 //là các giá trị được nạp vào dp
 reg signed [SIZE_1-1:0] res_out_1;
@@ -97,7 +95,7 @@ if (conv_en==1)        //enable convolution
 				0: begin re_wb=1; read_addressw=memstartw+(2'd0*(filt+1)); end
 				1: begin end
 				2: begin							
-						w11=qw[SIZE_1-1:0]; 
+						w11=qw[SIZE_1-1:0]     ;  
 						w12=qw[SIZE_2-1:SIZE_1]; 
 						w13=qw[SIZE_3-1:SIZE_2]; 
 						w14=qw[SIZE_4-1:SIZE_3]; 
@@ -162,7 +160,7 @@ if (conv_en==1)        //enable convolution
 								else	write_addressp=memstartzap+i-2;
 								res1=Y1; if (lvl!=0) res1=res1+res_old_1; 
 								if (bias==1) 
-									begin  
+									begin
 										res_bias_check_1=res1[SIZE_1+SIZE_1-2+1:SIZE_1-1];
 										if (res_bias_check_1>(2**(SIZE_1-1))-1) 
 											begin

@@ -12,7 +12,6 @@ input [12:0] address_p; // địa chỉ ghi
 reg signed [SIZE-1:0] storage [5459:0];
 
 initial begin
-
 storage[0] =  11'b0;
 storage[1] =  11'b0;
 storage[2] =  11'b0;
